@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Antony Eagle modified pandoc html template for Gavinb David Young lecture galleys 2024-07-11 -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="title" content="$title$" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$, $institute$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="Lecture $lecture$, $date-meta$. Published $pubyear$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(abstract)$
+  <meta name="description" content="Gavin David Young Lectures in Philosophy $lecture$ ($pubyear$). ISSN 2653-5378" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> -->
+  <style>
+    $styles.html()$
+  </style>
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$if(math)$
+$if(mathjax)$
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+$endif$
+  $math$
+$endif$
+<html xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"> 
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+$if(title)$
+<header id="title-block-header">
+$if(date)$
+  $if(ordinal-lecture)$
+    <p class="date">The $ordinal-lecture$ Gavin David Young Lecture in Philosophy<br>The University of Adelaide, $date$</p>
+  $else$
+    <p class="date">$date$</p>
+  $endif$
+$else$
+  $if(event)$
+    <p class="date">$event$</p>
+  $endif$
+$endif$
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+<hr>
+$for(author)$
+<p class="author">$author$<br><em>$institute$</em></p><p><a href="https://orcid.org/$orcid$" target="_blank"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_64x64.png" style="display: inline-block; width: auto; height: 1.1em; vertical-align:text-bottom; margin: 0 0 3px 0" alt="Orcid logo" />https://orcid.org/$orcid$</a></p>
+$endfor$
+$if(abstract)$
+<div class="abstract">
+<div class="abstract-title">$abstract-title$</div>
+$abstract$
+$if(keywords)$
+<p><strong>Keywords</strong>&nbsp; $for(keywords)$ $keywords$$sep$ · $endfor$</p>
+$endif$
+  </div>
+$endif$
+</header>
+$endif$
+$if(toc)$
+<nav id="$idprefix$TOC" role="doc-toc">
+$if(toc-title)$
+<h2 id="$idprefix$toc-title">$toc-title$</h2>
+$endif$
+$table-of-contents$
+</nav>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+<hr>
+$if(thanks)$
+<p><strong>Acknowledgements</strong>&nbsp; $for(thanks)$$thanks$$sep$</p>$endfor$</p><hr>
+$endif$
+$if(peers)$  
+<p><strong>Peer reviewers</strong>&nbsp; $for(peers)$$peers$$sep$ · $endfor$
+$if(editor)$
+<br>  <strong>Editor</strong>&nbsp; $editor$
+$endif$</p>$endif$
+
+<p><a href="" property="dct:title" rel="cc:attributionURL">$title$</a> is © <a href="https://orcid.org/$orcid$" rel="cc:attributionURL dct:creator" property="cc:attributionName">$author$</a> $pubyear$. This material is published under a Creative Commons license: <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license noopener noreferrer">CC BY-NC 4.0</a> <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="display: inline-block; width: auto; height: 1.1em; vertical-align:text-bottom; margin: 0 0 3px 0" alt="Creative Commons logo" /> <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="display: inline-block; width: auto; height: 1.1em; vertical-align:text-bottom; margin: 0 0 3px 0" alt="Creative Commons attribution logo" /> <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="display: inline-block; width: auto; height: 1.1em; vertical-align:text-bottom; margin: 0 0 3px 0" alt="Creative Commons noncommercial logo" />.</p>
+
+</body>
+</html>
