@@ -119,6 +119,7 @@ $--
 \usepackage{nth}
 \renewcommand{\phi}{\varphi}
 \frenchspacing \raggedbottom
+\usepackage{tikz}\usepackage{tikz-qtree}\usetikzlibrary{calc}
 
 
 $if(title)$
