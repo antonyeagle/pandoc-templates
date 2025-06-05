@@ -45,6 +45,7 @@ $--
 \usepackage{tabulary}
 \usepackage[norule,bottom,hang]{footmisc}
 \usepackage{graphicx}
+\usepackage[all]{nowidow}
 \usepackage{epigraph}
   \setlength{\beforeepigraphskip}{2\baselineskip}
   \setlength{\afterepigraphskip}{2\baselineskip}
@@ -79,7 +80,7 @@ $if(subtitle)$
   \usepackage{etoolbox}
   \makeatletter
   \providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+  \apptocmd{\@title}{\par {\Large #1 \par}}{}{}
   }
   \makeatother
   \subtitle{$subtitle$}
