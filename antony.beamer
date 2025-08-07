@@ -69,7 +69,12 @@ $if(section-titles)$
 \AtBeginPart{
   \frame{\partpage}
 }
-\AtBeginSection{
+\AtBeginSection[\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}\frame{\sectionpage}]{
   \ifbibliography
   \else
     \frame{\sectionpage}
