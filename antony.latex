@@ -18,6 +18,9 @@ $if(geometry)$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $endif$
 \usepackage{amsmath,amssymb}
+$if(cancel)$
+\usepackage{cancel}
+$endif$
 $--
 $-- section numbering
 $--
@@ -34,6 +37,19 @@ $header-includes$
 $endfor$
 $after-header-includes.latex()$
 $hypersetup.latex()$
+$if(pdf-trailer-id)$
+\ifXeTeX
+\special{pdf:trailerid [ $pdf-trailer-id$ ]}
+\fi
+\ifPDFTeX
+\pdftrailerid{}
+\pdftrailer{/ID [ $pdf-trailer-id$ ]}
+\fi
+\ifLuaTeX
+\pdfvariable trailerid {[ $pdf-trailer-id$ ]}
+\fi
+$endif$
+
 $--
 $-- Antony additions
 $--
@@ -164,7 +180,9 @@ $else$
 $endif$
 {
 $if(colorlinks)$
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
+$if(toccolor)$
+\hypersetup{linkcolor=$toccolor$}
+$endif$
 $endif$
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
