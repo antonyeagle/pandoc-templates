@@ -1,5 +1,11 @@
 $passoptions.latex()$
 \documentclass[
+$for(babel-otherlangs)$
+  $babel-otherlangs$,
+$endfor$
+$if(babel-lang)$
+  $babel-lang$,
+$endif$
 $if(fontsize)$
   $fontsize$,
 $endif$
@@ -60,7 +66,6 @@ $--
 \usepackage[english]{isodate}\isodate
 \usepackage{tabulary}
 \usepackage[norule,bottom,hang]{footmisc}
-\usepackage{graphicx}
 \usepackage{epigraph}
   \setlength{\beforeepigraphskip}{2\baselineskip}
   \setlength{\afterepigraphskip}{2\baselineskip}
@@ -206,6 +211,9 @@ $if(has-frontmatter)$
   \backmatter
 $endif$
 \small
+$if(nocite-ids)$
+\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
+$endif$
 $if(natbib)$
   $if(bibliography)$
     $if(biblio-title)$
