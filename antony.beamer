@@ -136,7 +136,7 @@ $if(subtitle)$
 $endif$
 $if(author)$
   $if(institute)$
-    \author{Antony Eagle\thanks{ORCiD: \href{https://orcid.org/0000-0002-0868-377X}{0000-0002-0868-377X}}\\ \large{\emph{University of Adelaide}}}
+    \author{Antony Eagle\thanks{ORCiD: \href{https://orcid.org/0000-0002-0868-377X}{0000-0002-0868-377X}}\\ \large{\emph{Adelaide University}}}
   $else$
     \author{Antony Eagle\thanks{ORCiD: \href{https://orcid.org/0000-0002-0868-377X}{0000-0002-0868-377X}}}
   $endif$
@@ -145,7 +145,7 @@ $else$
 $endif$
 \author$if(shortauthor)$[$shortauthor$]$endif${$for(author)$$author$$sep$ \and $endfor$}
 $if(institute)$
-\institute{\emph{University of Adelaide}\qquad \href{https://antonyeagle.org}{antonyeagle.org}}
+\institute{\emph{Adelaide University}\qquad \href{https://antonyeagle.org}{antonyeagle.org}}
 $else$
 \institute{\href{https://antonyeagle.org}{antonyeagle.org}}
 $endif$

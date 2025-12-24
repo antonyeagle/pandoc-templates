@@ -100,7 +100,7 @@ $if(subtitle)$
 $endif$
 $if(author)$
   $if(institute)$
-    \author{Antony Eagle\thanks{\begin{picture}(10,0)\put(3,-2){\includegraphics[height=0.8\baselineskip]{/Users/anteagle/Documents/pandoc/orcid.png}}\end{picture} \href{https://orcid.org/0000-0002-0868-377X}{0000-0002-0868-377X}}\\ \large{\emph{University of Adelaide}}}
+    \author{Antony Eagle\thanks{\begin{picture}(10,0)\put(3,-2){\includegraphics[height=0.8\baselineskip]{/Users/anteagle/Documents/pandoc/orcid.png}}\end{picture} \href{https://orcid.org/0000-0002-0868-377X}{0000-0002-0868-377X}}\\ \large{\emph{Adelaide University}}}
   $else$
     \author{Antony Eagle\thanks{ORCiD: \href{https://orcid.org/0000-0002-0868-377X}{0000-0002-0868-377X}}}
   $endif$

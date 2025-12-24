@@ -100,7 +100,7 @@ $else$
 $endif$
 $if(date)$
 $if(lecture)$
-\date{The \nth{$lecture$} Gavin David Young Lecture in Philosophy\\ The University of Adelaide, $date$}
+\date{The \nth{$lecture$} Gavin David Young Lecture in Philosophy\\ Adelaide University, $date$}
   $else$
   \date{$date$}
   $endif$
