@@ -73,7 +73,10 @@
     }
   }
 
-  block(below: 1em, width: 100%)[
+#let has-title-block = title != none or (authors != none and authors != ()) or
+                       date != none or abstract != none
+#if has-title-block {
+  place(top, float: true, scope: "parent", clearance: 4mm, block(below: 1em, width: 100%)[
     #if title != none {
       align(center, block[
           #text(weight: "bold", size: 1.5em, hyphenate: false)[#title #if thanks != none {
@@ -113,7 +116,7 @@
         #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
       ]
     }
-  ]
-
+  ])
+}
   doc
 }
