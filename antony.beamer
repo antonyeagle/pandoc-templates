@@ -110,6 +110,7 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 $after-header-includes.latex()$
+\usepackage{hyperxmp}
 $hypersetup.latex()$
 
 $--
@@ -126,7 +127,7 @@ $--
 \renewcommand{\phi}{\varphi}
 \frenchspacing \raggedbottom
 \usepackage{tikz}\usepackage{tikz-qtree}\usetikzlibrary{calc}
-\usepackage{hyperxmp}
+
 
 $if(title)$
 \title$if(shorttitle)$[$shorttitle$]$endif${$title$$if(thanks)$\thanks{$thanks$}$endif$}
