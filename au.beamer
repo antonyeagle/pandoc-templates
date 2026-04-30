@@ -81,6 +81,7 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 $after-header-includes.latex()$
+\usepackage{hyperxmp}
 $hypersetup.latex()$
 
 $--
@@ -128,7 +129,7 @@ $for(titlegraphic)$
   \includegraphics$if(titlegraphicoptions)$[$for(titlegraphicoptions)$$titlegraphicoptions$$sep$, $endfor$]$endif${$titlegraphic$}$sep$\enspace
 $endfor$}
 $endif$
-\titlegraphic{\includegraphics[alt={Adelaide University logo},keepaspectratio,height=1.5cm]{/Users/anteagle/Documents/Teaching/teaching-AU/au-logo-small.png}}
+\titlegraphic{\includegraphics[alt={Adelaide University logo},keepaspectratio,height=1.5cm]{/Users/anteagle/Documents/Profession/au-brand/au-logo-small.png}}
 
 $if(logo)$
 \logo{\includegraphics{$logo$}}
