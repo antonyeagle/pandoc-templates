@@ -217,9 +217,6 @@ $endif$
   \setcounter{tocdepth}{$toc-depth$}
   \tableofcontents[hideallsubsections]
 \end{frame}
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents[hideallsubsections]
-}
 $endif$
 $if(lof)$
 \listoffigures
